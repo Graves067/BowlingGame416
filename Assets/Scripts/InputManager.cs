@@ -28,7 +28,7 @@ void Update(){
 
             if (Input.GetKeyDown(KeyCode.R))
             {
-            OnSpacePressed?.Invoke();
+            OnResetPressed?.Invoke();
             }
     }
 }

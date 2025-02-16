@@ -12,11 +12,9 @@ using UnityEngine.Events;
 
 void Start(){
 
-    ballRB = GetComponent<Rigidbody>();
-    inputManager.OnSpacePressed.AddListener(LaunchBall);
-        transform.parent = ballAnchor;
-        transform.localPosition = Vector3.zero;
-        ballRB.isKinematic = true;
+        ballRB = GetComponent<Rigidbody>();
+        Cursor.lockState = CursorLockMode.Locked;
+        inputManager.OnSpacePressed.AddListener(LaunchBall);
         ResetBall();
 
     }
@@ -24,7 +22,7 @@ void Start(){
         isBallLaunched = false;
         ballRB.isKinematic = true;
         launchIndicator.gameObject.SetActive(true);
-        transform.parent=ballAnchor;
+        transform.parent = ballAnchor;
         transform.localPosition = Vector3.zero;
     }
 
